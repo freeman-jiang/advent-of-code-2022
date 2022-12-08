@@ -1,6 +1,6 @@
 def exists_overlap(a: str, b: str) -> bool:
     low_a, high_a = [int(x) for x in a.split("-")]
-    low_b, high_b = [int(x) for x in b.split("-")]
+    low_b, high_b = map(int, b.split("-"))
 
     if high_a < low_b:
         return False
